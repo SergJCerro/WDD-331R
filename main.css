@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --HeadLines: font-family: 'Lora', serif;
+    --BodyFont: font-family: 'Helvetica', 'Arial', sans-serif;
+    --Hr: #d0d0d0;
+    --Blue: #6495ED;
+    --Text:#FAEBD7;
+    /*Nav*/
+    --NavLinksNormal: #FAEBD7 ;
+    --NavLinksVisited: #FAEBD7;
+    --NavLinkActive: #DEB887;
+    --NavLinkOtherNormal : #6495ED;
+    --ArticleTitleActive: #DEB887 ; 
+    --ArticleTitleVisited: #6495ED;;
+    --NavLinkHover: #00ddff;
+    --TitleofSite: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    padding: 0 auto;
+    font-family: var(--BodyFont) 
+}
+header{
+    background: var(--Blue);
+    margin:0;
+    padding: 30px;
+    text-align:right;
+    grid-area: header;
+    
+}
+header a:link{
+    text-decoration: none;
+    color: var(--NavLinksNormal);
+}  
+header a:visited{
+    color: var(--NavLinksVisited);
+}
+header a:active{
+    color: var(--NavLinkActive);
+}
+header a:hover{
+    color: white;
+    text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+font-family:  var(--HeadLines);
+}
+
+hr{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+li{
+    list-style: none;
+    margin:10px;
+}
+
+ a:link{
+    color: var(--NavLinkOtherNormal);
+    text-decoration: none;
+}
+ a:visited{
+    color:var(--ArticleTitleVisited);
+    text-decoration: none;
+}
+ a:hover{
+    text-decoration: underline;
+
+}
+.post-content h2 a:link{
+    color:black;
+}
+.post-content h2 a:visited{
+    color:black;
+}
+.post-content h2 a:active{
+    color:var(--ArticleTitleActive);
+}
+.post-content h2 a:hover{
+    color:var(--Blue);
+}
+main{
+    background-color: var(--Text);
+    margin: 0;
+    padding: 10px;
+    grid-area: main;
+}
+.post-date{
+    margin:10px;
+    color: #999;
+}
+article{
+    margin:10px;
+    margin-top:20px;
+    background: white;
+    padding: 15px;
+    box-shadow: rgb(168, 162, 162) 3px 3px 3px;
+} 
+img{
+    max-width: 200px;
+    text-align:center;
+    width: 100%;
+    margin-top:30px;
+}
+
+@media screen and (min-width: 700px){
+    body div{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin: 0 20px;
+        grid-template-areas: 'header main main main'
+                             'header main main main'
+                             'header main main main'   
+                             'header main main main';   
+    }
+    header ul li {
+        font-size: 15px;
+    }
+    img{
+        padding-left: 50px;
+    }
+}
