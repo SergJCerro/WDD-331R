@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600;1,700&display=swap');
 
 :root {
-    --HeadLines: font-family: 'Lora', serif;
-    --BodyFont: font-family: 'Helvetica', 'Arial', sans-serif;
     --Hr: #d0d0d0;
     --Blue: #6495ED;
     --Text:#FAEBD7;
@@ -23,7 +21,7 @@
 body{
     margin: 0 ;
     padding: 0 ;
-    font-family: var(--BodyFont) ;
+    font-family:'Helvetica', 'Arial', sans-serif;
 }
 header{
     background: var(--Blue);
@@ -48,7 +46,7 @@ header a:hover{
     text-decoration: underline;
 }
 h1, h2, h3, h4, h5, h6{
-font-family:  var(--HeadLines);
+font-family: 'Lora', serif;
 }
 
 hr{
